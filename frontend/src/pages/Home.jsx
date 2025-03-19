@@ -10,6 +10,8 @@ import worldImg from '../assets/images/world.png'
 
 import Subtitle from '../shared/Subtitle';
 
+import SearchBar from '../shared/SearchBar';
+
 const Home = () => {
   return <>
 
@@ -21,11 +23,11 @@ const Home = () => {
           <Col lg='6'>
             <div className="hero__content">
               <div className="hero__subtitle d-flex align-items-center">
-                <Subtitle subtitle={'Welcome to Our Community'}/>
                 <img src={worldImg} alt=" "/>
+                <Subtitle subtitle={'Join Our Wander Community'}/>
 
               </div>
-              <h1>Travel more and create more <span className="highlight">MEMORIES</span></h1>
+              <h1>More <span className="highlight">Wandering</span><br></br>More <span className="highlight">Traveling</span><br></br>More <span className="highlight">MEMORIES</span></h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, modi sint hic nisi exercitationem, possimus corporis voluptatibus ducimus animi delectus quod sit commodi alias velit. Ducimus ex repellendus ullam veritatis.</p>
             </div>
           </Col>
@@ -44,10 +46,21 @@ const Home = () => {
               <img src={heroImg02} alt=" "/>
             </div>
           </Col>
+          <SearchBar/>
         </Row>
       </Container>
     </section>
     {/* ======= Hero Section End ======= */}
+    <section>
+      <Container>
+        <Row>
+          <Col lg='3'>
+            <h5 className='services-subtitle'>What we serve</h5>
+            <h2 className='services-title'>We offer our best services</h2>
+          </Col>
+        </Row>
+      </Container>
+    </section>
     
   </>
   
