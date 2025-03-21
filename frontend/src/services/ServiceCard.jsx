@@ -1,8 +1,18 @@
 import React from 'react'
+import './service-card.css'
 
-const ServiceCard = () => {
+const ServiceCard = ({item}) => {
+
+  const{imgUrl, title, desc} = item
+
   return (
-    <div>ServiceCard</div>
+    <div className="service-item">
+      <div className="service-img">
+        <img src={imgUrl} alt="" />
+      </div>
+      <h5>{title}</h5>
+      <p>{desc}</p>
+    </div>
   )
 }
 
