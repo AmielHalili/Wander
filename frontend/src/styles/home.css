@@ -67,3 +67,58 @@
     font-size: 2.5rem;
     font-weight: 500;
 }
+
+
+
+
+
+.featured-tour-title{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+.experience-content h2{
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.experience-content p{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+    line-height: 2rem;
+}
+
+.counter-wrapper{
+    margin-top: 2.5rem;
+}
+
+.counter-box span{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color:  white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 10px 5px 10px 5px;
+}
+
+
+.counter-box h6{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
