@@ -54,8 +54,8 @@ ul {
   color: inherit;
 }
 .secondary__btn {
-  background: transparent !important;
-  color: #0b2727 !important;
+  background: var(--primary-color) !important;
+  color: white !important;
   border: none !important;
   font-weight: 500 !important;
 }
@@ -63,7 +63,7 @@ ul {
 .secondary__btn a {
   text-decoration: none;
   font-size: 1.1rem;
-  color: var(--heading-color);
+  color: white;
 }
 
 .secondary__btn a:hover {
