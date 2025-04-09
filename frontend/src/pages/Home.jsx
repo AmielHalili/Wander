@@ -17,6 +17,12 @@ import ServiceList from '../services/ServiceList';
 
 import FeaturedTourList from '../components/Featured-Tours/FeaturedTourList';
 
+
+import MasonryImagesGallery from '../components/Image-gallery/MasonryImagesGallery';
+
+import Testimonials from '../components/Testimonial/Testimonials';
+import Newsletter from '../shared/Newsletter';
+
 const Home = () => {
   return <>
 
@@ -84,7 +90,7 @@ const Home = () => {
 
   {/* ======= other featured tours end ======= */}
 
-  {/* ======= Testimonials start ======= */}
+  {/* ======= Experience start ======= */}
   <section>
     <Container>
       <Row>
@@ -123,7 +129,41 @@ const Home = () => {
       </Row>
     </Container>
     </section>
-  {/* ======= Testimonials end ======= */}
+  {/* ======= Experience end ======= */}
+
+  {/* ======= gallery start ======= */}
+
+  <section>
+    <Container>
+      <Row>
+        <Col lg='12'>
+        <Subtitle subtitle={'Gallery'}></Subtitle>
+        <h2 className="gallery-title">Visit our customers tour gallery</h2>
+        </Col>
+        <Col lg='12'>
+          <MasonryImagesGallery/>
+        </Col>
+      </Row>
+    </Container>
+  </section>
+  
+  {/* ======= gallery end ======= */}
+  {/* ======= testimonial start ======= */}
+  <section>
+    <Container>
+      <Row>
+        <Col lg ='12'>
+        <Subtitle subtitle={'Fans Love'}/>
+        <h2 className="testimonial-title">What our fans say about us</h2>
+        </Col>
+        <Col lg='12'>
+          <Testimonials/>
+        </Col>
+      </Row>
+    </Container>
+  </section>
+  {/* ======= testimonial end ======= */}
+  <Newsletter/>
 
 
   </>

@@ -117,8 +117,35 @@
 
 
 .counter-box h6{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--text-color);
+    margin-top: 1rem;       
+}
+
+
+.gallery-title{
+    font-size: 2.3rem;
+    margin-bottom: 2.5 rem;
+    margin-top: 1rem;
+}
+
+
+
+
+.masonry-img{
+    transition: .4s;
+}
+
+
+.masonry-img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.testimonial-title{
+    font-size: 2.3rem;
+    margin-bottom: 2.5 rem;
     margin-top: 1rem;
 }
