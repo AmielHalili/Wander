@@ -36,7 +36,7 @@ const Footer = () => {
                   <Link to='#'><i class="ri-youtube-line"></i></Link>
                 </span>
                 <span>
-                  <Link to='#'><i class="ri-github-line"></i></Link>
+                  <Link to='https://github.com/AmielHalili/Wander'><i class="ri-github-line"></i></Link>
                 </span>
                 <span>
                   <Link to='#'><i class="ri-instagram-line"></i></Link>

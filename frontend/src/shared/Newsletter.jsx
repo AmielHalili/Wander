@@ -1,35 +1,54 @@
-import React from 'react'
-import '../shared/newsletter.css'
+import React, { useState } from 'react';
+import '../shared/newsletter.css';
 
-import {Container, Row, Col} from 'reactstrap'
-import maleTourist from '../assets/images/male-tourist.png'
+import { Container, Row, Col } from 'reactstrap';
+import maleTourist from '../assets/images/male-tourist.png';
 
 const Newsletter = () => {
-  return (
-    <section className="newsletter">
-        <Container>
-            <Row>
-                <Col lg='6'>
-                <div className="newsletter-content">
-                    <h2>Subscribe now to get useful traveling information</h2>
+    const [email, setEmail] = useState('');
 
-                    <div className="newsletter-input">
-                        <input type ="email" placeholder='Enter your email' />
-                        <button className='btn newsletter-btn'>Subscribe</button>
-                    </div>
+    const handleSubscribe = () => {
+        if (email) {
+            alert(`Confirmation email sent to ${email}`);
+            console.log(`Confirmation email sent to ${email}`);
+            setEmail(''); // Clear the input field
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    };
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
-                </div>
-                </Col>
-                <Col lg='6'>
-                <div className="newsletter-img">
-                    <img src={maleTourist} alt=""/>
-                </div>
-                </Col>
-            </Row>
-        </Container>
-    </section>
-  )
-}
+    return (
+        <section className="newsletter">
+            <Container>
+                <Row>
+                    <Col lg="6">
+                        <div className="newsletter-content">
+                            <h2>Subscribe now to get useful traveling information</h2>
 
-export default Newsletter
+                            <div className="newsletter-input">
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                                <button className="btn newsletter-btn" onClick={handleSubscribe}>
+                                    Subscribe
+                                </button>
+                            </div>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+                        </div>
+                    </Col>
+                    <Col lg="6">
+                        <div className="newsletter-img">
+                            <img src={maleTourist} alt="" />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+    );
+};
+
+export default Newsletter;

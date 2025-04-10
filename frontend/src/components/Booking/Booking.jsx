@@ -1,18 +1,25 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import './booking.css'
 
 import {Form, FormGroup, ListGroup, ListGroupItem, Button} from 'reactstrap'
 
 import {useNavigate} from 'react-router-dom'
 
+import {AuthContext} from '../../context/AuthContext'
+
+import { BASE_URL } from '../../utils/config'
+
 const Booking = ({tour, avgRating}) => {
     
     const navigate = useNavigate()
-    const{price, reviews} = tour
+    const{price, reviews, title} = tour
+
+    const {user} = useContext(AuthContext)
 
     const[credentials, setCredentials] = useState({
-        userId: '01',
-        userEmail: 'example@gmail.com',
+        userId: user && user._id,
+        userEmail: user && user.email,
+        tourName: title,
         fullName: '',
         phone: '',
         guestSize: 1,
@@ -25,14 +32,45 @@ const Booking = ({tour, avgRating}) => {
     }
 
     //data => server
-    const handleClick = (e) => {
+    const handleClick = async (e) => {
         e.preventDefault()
 
-        navigate("/thank-you")
+        try {
+            if(!user || user ===undefined || user === null) {
+                return alert('Please login to book a tour')
+            }
+                
+
+                const token = localStorage.getItem('token')
+
+                const res = await fetch(`${BASE_URL}/booking`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`,
+                    },
+                    body: JSON.stringify(credentials),
+                });
+
+                const result = await res.json();
+
+                if(!res.ok) {
+                    alert(result.message)
+                }
+                navigate("/thank-you")
+
+            }
+         catch (error) {
+            alert(error.message)
+        }
+
+        
     }
 
-    const serviceFee = 10
+    const serviceFee = 11
     const totalAmount = Number(price) *Number(credentials.guestSize) + Number(serviceFee)
+
+    
 
 
   return (
