@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="logo">
               <img src={logo} alt=""/>
               <h5>Wander</h5>
-              <p>Lorem ipsum dolor seit amet consectetur adipisicing elit. Commodi, enim.</p>
+              <p>Smart itineraries. Simple booking. Limitless adventure.</p>
 
               <div className="social-links d-flex align-items-center gap-4">
                 <span>

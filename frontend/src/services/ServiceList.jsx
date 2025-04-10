@@ -11,17 +11,17 @@ const servicesData =[
   {
     imgUrl: weatherImg,
     title: 'Weather',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis.'
+    desc: 'Real-time weather updates for every destination. We help you plan your trip with confidence with an accurate forecast.'
   },
   {
     imgUrl: guideImg,
     title: 'Tour Guide',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis.'
+    desc: 'Experience captivating tours with thoughtfully crafted itineraries that lead you to the most unforgettable destinations.'
   },
   {
     imgUrl: customizationImg,
     title: 'Customization',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis.'
+    desc: 'Tailor your travel experience to your preferences. We offer itineraries that suit your interests and needs.'
   }
 ]
 
