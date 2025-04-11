@@ -37,7 +37,7 @@ const Newsletter = () => {
                                 </button>
                             </div>
 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+                            <p>No spam. Just good travel inspo and planning help when you need it.</p>
                         </div>
                     </Col>
                     <Col lg="6">

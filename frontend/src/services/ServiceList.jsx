@@ -10,8 +10,8 @@ import customizationImg from '../assets/images/customization.png'
 const servicesData =[
   {
     imgUrl: weatherImg,
-    title: 'Weather',
-    desc: 'Real-time weather updates for every destination. We help you plan your trip with confidence with an accurate forecast.'
+    title: 'Local Gems',
+    desc: 'Discover off-the-beaten-path spots loved by locals—perfect for travelers who crave unique, authentic experiences.'
   },
   {
     imgUrl: guideImg,
