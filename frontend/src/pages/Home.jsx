@@ -23,6 +23,8 @@ import MasonryImagesGallery from '../components/Image-gallery/MasonryImagesGalle
 import Testimonials from '../components/Testimonial/Testimonials';
 import Newsletter from '../shared/Newsletter';
 
+import GoogleMapView from '../components/GoogleMapView';
+
 const Home = () => {
   return <>
 
@@ -132,6 +134,12 @@ const Home = () => {
       </Container>
     </section>
     {/* ======= Experience end ======= */}
+    <section>
+      <div>
+                  <h1 className="google-title">Wander the World!</h1>
+                  <GoogleMapView />
+              </div>
+    </section>
 
     {/* ======= gallery start ======= */}
 

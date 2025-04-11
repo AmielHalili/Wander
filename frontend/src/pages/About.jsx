@@ -66,7 +66,10 @@ const About = () => {
                 </Row>
             </Container>
         </section>
-        <GoogleMapView />
+        <div>
+            <h1 className="google-title">Wander the World!</h1>
+            <GoogleMapView />
+        </div>
         </>
     );
 };
