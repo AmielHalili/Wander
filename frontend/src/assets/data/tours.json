@@ -8,6 +8,23 @@
     "maxGroupSize": 10,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [
+      {
+        "day": "1 Day: London – Westminster Bridge, Big Ben, Southbank",
+        "morning": [
+          "Westminster Bridge: Scenic walk with iconic views of Big Ben and Parliament. Free entry.",
+          "Churchill War Rooms: Explore the underground bunkers of WWII – $33."
+        ],
+        "afternoon": [
+          "Westminster Abbey: Self-guided tour of this historic coronation church – $32.",
+          "Southbank Centre Art Exhibits: Contemporary culture and art. Entry – $10."
+        ],
+        "evening": [
+          "London Eye: Ride the iconic observation wheel for panoramic city views – $45.",
+          "Evening walk along the South Bank: Watch the sunset over the Thames. Free entry."
+        ]
+      }
+    ],
 
     "photo": "/tour-images/tour-img01.jpg",
     "featured": true
@@ -21,6 +38,7 @@
     "maxGroupSize": 8,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [],
 
     "photo": "/tour-images/tour-img02.jpg",
     "featured": true
@@ -34,6 +52,7 @@
     "maxGroupSize": 8,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [],
 
     "photo": "/tour-images/tour-img03.jpg",
     "featured": true
@@ -47,6 +66,7 @@
     "maxGroupSize": 8,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [],
 
     "photo": "/tour-images/tour-img04.jpg",
     "featured": true
@@ -60,6 +80,7 @@
     "maxGroupSize": 8,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [],
 
     "photo": "/tour-images/tour-img05.jpg",
     "featured": true
@@ -73,6 +94,7 @@
     "maxGroupSize": 8,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [],
 
     "photo": "/tour-images/tour-img06.jpg",
     "featured": true
@@ -86,6 +108,7 @@
     "maxGroupSize": 8,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [],
 
     "photo": "/tour-images/tour-img07.jpg",
     "featured": true
@@ -99,6 +122,7 @@
     "maxGroupSize": 8,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [],
 
     "photo": "/tour-images/tour-img03.jpg",
     "featured": true
@@ -112,6 +136,7 @@
     "maxGroupSize": 5,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [],
 
     "photo": "/tour-images/tour-img08.jpg",
     "featured": false
@@ -125,6 +150,7 @@
     "maxGroupSize": 8,
     "desc": "this is the description",
     "reviews": [],
+    "itinerary": [],
 
     "photo": "/tour-images/tour-img09.jpg",
     "featured": false

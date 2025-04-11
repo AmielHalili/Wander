@@ -26,12 +26,11 @@ const TourDetails = () => {
     title,
     desc,
     price,
-
     reviews,
     city,
-
     maxGroupSize,
-  } = tour;
+    itinerary, // Added itinerary here
+  } = tour || {}; // Ensure tour is defined to avoid errors
 
   const { totalRating, avgRating } = calculateAvgRating(reviews);
 
@@ -44,8 +43,9 @@ const TourDetails = () => {
     const reviewText = reviewMsgRef.current.value;
 
     try {
-      if (!user || user === undefined || user === null) {
+      if (!user) {
         alert("Please sign in");
+        return;
       }
 
       const reviewObj = {
@@ -61,7 +61,6 @@ const TourDetails = () => {
           "content-type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-
         body: JSON.stringify(reviewObj),
       });
 
@@ -98,7 +97,7 @@ const TourDetails = () => {
                     <div className="d-flex align-items-center gap-5">
                       <span className="tour-rating d-flex align-items-center gap-1">
                         <i
-                          class="ri-star-s-fill"
+                          className="ri-star-s-fill"
                           style={{ color: "var(--secondary-color)" }}
                         ></i>
                         {avgRating === 0 ? null : avgRating}
@@ -112,20 +111,78 @@ const TourDetails = () => {
 
                     <div className="tour-extra-details">
                       <span>
-                        <i class="ri-map-pin-2-line"></i> {city}
+                        <i className="ri-map-pin-2-line"></i> {city}
                       </span>
                       <span>
-                        <i class="ri-money-dollar-circle-line"></i> ${price}{" "}
+                        <i className="ri-money-dollar-circle-line"></i> ${price}{" "}
                         /per person
                       </span>
 
                       <span>
-                        <i class="ri-group-line"></i> {maxGroupSize} people
+                        <i className="ri-group-line"></i> {maxGroupSize} people
                       </span>
                     </div>
                     <h5>Description</h5>
                     <p>{desc}</p>
                   </div>
+
+                  {/* ========== Itinerary Section =========== */}
+                  {itinerary && (
+                    <div className="tour-itinerary mt-4">
+                      <h4>Itinerary</h4>
+                      {itinerary.length === 0 ? (
+                        <p className="text-muted">
+                          Itinerary will be provided soon.
+                        </p>
+                      ) : (
+                        itinerary.map((day, index) => (
+                          <div className="itinerary-day" key={index}>
+                            <h5>{day.day}</h5>
+
+                            {day.morning && (
+                              <>
+                                <p>
+                                  <strong>Morning</strong>
+                                </p>
+                                <ul>
+                                  {day.morning.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                  ))}
+                                </ul>
+                              </>
+                            )}
+
+                            {day.afternoon && (
+                              <>
+                                <p>
+                                  <strong>Afternoon</strong>
+                                </p>
+                                <ul>
+                                  {day.afternoon.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                  ))}
+                                </ul>
+                              </>
+                            )}
+
+                            {day.evening && (
+                              <>
+                                <p>
+                                  <strong>Evening</strong>
+                                </p>
+                                <ul>
+                                  {day.evening.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                  ))}
+                                </ul>
+                              </>
+                            )}
+                          </div>
+                        ))
+                      )}
+                    </div>
+                  )}
+                  {/* ========== Itinerary Section End =========== */}
 
                   {/* ========== tour reviews section =========== */}
                   <div className="tour-reviews mt-4">
@@ -133,21 +190,14 @@ const TourDetails = () => {
 
                     <Form onSubmit={submitHandler}>
                       <div className="d-flex align-items-center gap-3 mb-4 rating-group">
-                        <span onClick={() => setTourRating(1)}>
-                          1 <i class="ri-star-s-fill"></i>
-                        </span>
-                        <span onClick={() => setTourRating(2)}>
-                          2 <i class="ri-star-s-fill"></i>
-                        </span>
-                        <span onClick={() => setTourRating(3)}>
-                          3 <i class="ri-star-s-fill"></i>
-                        </span>
-                        <span onClick={() => setTourRating(4)}>
-                          4 <i class="ri-star-s-fill"></i>
-                        </span>
-                        <span onClick={() => setTourRating(5)}>
-                          5 <i class="ri-star-s-fill"></i>
-                        </span>
+                        {[1, 2, 3, 4, 5].map((rating) => (
+                          <span
+                            key={rating}
+                            onClick={() => setTourRating(rating)}
+                          >
+                            {rating} <i className="ri-star-s-fill"></i>
+                          </span>
+                        ))}
                       </div>
 
                       <div className="review-input">
@@ -183,7 +233,7 @@ const TourDetails = () => {
                               </div>
                               <span className="d-flex align-items-center">
                                 {review.rating}
-                                <i class="ri-star-s-fill"></i>
+                                <i className="ri-star-s-fill"></i>
                               </span>
                             </div>
 

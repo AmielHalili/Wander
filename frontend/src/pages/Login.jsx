@@ -13,6 +13,8 @@ import userIcon from '../assets/images/user.png'
 import {AuthContext} from '../context/AuthContext'
 import {BASE_URL} from '../utils/config'
 
+//import GoogleLogin from '../components/GoogleLogin'
+
 
 
 const Login = () => {
@@ -84,6 +86,7 @@ const Login = () => {
                 <FormGroup>
                   <input type="password" placeholder='Password' id='password' required onChange={handleChange} />
                 </FormGroup >
+                {/*<GoogleLogin />*/}
                 <Button className='btn secondary__btn auth__btn w-100 mt-4' type='submit'>
                   Login
                 </Button>
