@@ -7,9 +7,10 @@ import gallery2 from '../assets/images/gallery-02.jpg'
 import gallery3 from '../assets/images/gallery-03.jpg'
 import heroimg from '../assets/images/hero-img02.jpg'
 import experienceImg from '../assets/images/experience.png'
+import GoogleMapView from '../components/GoogleMapView';
 
 const About = () => {
-    return (
+    return (<>
         <section className="about-section">
             <Container className="about-hero-section mt-5">
                 <h2> Smart itineraries. Simple booking. Limitless adventure. </h2>
@@ -65,6 +66,8 @@ const About = () => {
                 </Row>
             </Container>
         </section>
+        <GoogleMapView />
+        </>
     );
 };
 
