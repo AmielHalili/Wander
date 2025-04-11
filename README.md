@@ -6,7 +6,7 @@ A full-stack travel booking app built using the MERN stack (MongoDB, Express, Re
 
 ## 🚀 Features
 
-- 🧾 Email/password auth or 3rd-party login via Auth0
+- 🧾 Email/password auth
 - 🛫 Tour listing and booking system
 - 🌍 MongoDB-powered user data and persistence
 - 🔐 JWT-based route protection
