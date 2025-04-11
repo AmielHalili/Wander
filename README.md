@@ -2,6 +2,12 @@
 
 A full-stack travel booking app built using the MERN stack (MongoDB, Express, React, Node.js), with secure authentication handled via jwt and cors
 
+## 💻 Deployment:
+- here is the website deployed through vercel and render
+
+https://wander-tau.vercel.app/ 
+
+
 ---
 
 ## 🚀 Features
